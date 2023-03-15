@@ -1,6 +1,14 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    
+    --purple-box-background: linear-gradient(0deg, rgb(120, 87, 255) 0%, rgb(46, 43, 233) 100%);
+    --score-background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+    --default-color: hsl(0, 0%, 100%);
+
+    
+    
 }
 
 .box {
@@ -13,15 +21,70 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.12500rem;
 }
 
 .purple-box {
     padding-top: 2em;
     padding-bottom: 2em;
-    background-color: purple;
+    background: rgb(120,87,255);
+    background: var(--purple-box-background);
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    max-width: 50%;
-    color: white
+    min-width: 50%;
+    color: white;
+    text-align: center;
+    
 }
+
+.purple-box .score {
+    background: var(--score-background);
+    border: 5px solid red;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.purple-box h1 {
+    line-height: .75;
+    margin-bottom: .1em;
+}
+
+.purple-box p {
+
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    justify-content: center;
+}
+
+.summary .section {
+    display: flex;
+    justify-content: space-between;
+}
+
