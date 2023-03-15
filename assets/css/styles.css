@@ -7,12 +7,30 @@
     --score-background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
     --default-color: hsl(0, 0%, 100%);
     --default-color-dim: hsla(0, 0%, 100%, 50%);
-    --default-color-dim-lighter: hsla(0, 0%, 100%, 75%)  
+    --default-color-dim-lighter: hsla(0, 0%, 100%, 75%);
+    --dark-blue-text: hsl(224, 30%, 27%);
+    --dark-blue-text-light: hsla(224, 30%, 27%, 50%);
+
+    --color-reaction: hsl(0, 100%, 67%);
+    --color-memory: hsl(39, 100%, 56%);
+    --color-verbal: hsl(166, 100%, 37%);
+    --color-visual: hsl(234, 85%, 45%);
+
+    --color-reaction-light: hsla(0, 100%, 67%, 10%);
+    --color-memory-light: hsla(39, 100%, 56%, 10%);
+    --color-verbal-light: hsla(166, 100%, 37%, 10%);
+    --color-visual-light: hsla(234, 85%, 45%, 10%);
+    
 }
 
 .box {
     display:flex;
-    max-width: 50%;
+    border-radius: 2em;
+    box-shadow: 4px 7px 22px 0px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 4px 7px 22px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 4px 7px 22px 0px rgba(0,0,0,0.18);
+    overflow: hidden;
+    
 }
 
 .main {
@@ -20,38 +38,40 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
 }
 
-h1 {
+h1 { /* Score */
     font-weight: 800;
     font-size: 4rem;
 }
 
-h2 {
-    font-weight: 700;
+h2 { /* "Great" */
+    font-weight: 800;
     font-size: 1.85rem;
 }
 
-h3 {
-    font-weight: 500;
-    font-size: 1.35rem;
+h3 { /* "Your Result" "Summary" */
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 p {
     font-size: 1.12500rem;
+    font-weight: 500;
 }
 
+
 .purple-box {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
     background: rgb(120,87,255);
     background: var(--purple-box-background);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    min-width: 50%;
+    width: 50%;
+    
     color: white;
     text-align: center;
     border-radius: 8%;
@@ -94,15 +114,109 @@ p {
     color: var(--default-color-dim);
 }
 
+
+
 .summary {
     display: flex;
     flex-direction: column;
-    min-width: 50%;
+    width: 50%;
     justify-content: center;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.summary .title{
+    margin-bottom: .7em;
+    font-size: 1.75em;
+    color: var(--dark-blue-text);
+
 }
 
 .summary .section {
     display: flex;
     justify-content: space-between;
+    padding: 1em;
+    margin-right: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 1em;
 }
 
+.section .percent {
+    color: var(--dark-blue-text);
+}
+
+.section .percent .out-of {
+    color: var(--dark-blue-text-light);
+}
+
+.colored-text-reaction {
+    color: var(--color-reaction);
+    margin-left: .5em;
+}
+
+.section#reaction {
+    background: var(--color-reaction-light);
+    
+}
+
+.imgandtext {
+    display: flex;
+}
+
+.colored-text-memory {
+    color: var(--color-memory);
+    margin-left: .5em;
+}
+
+.section#memory {
+    background: var(--color-memory-light);
+}
+
+.colored-text-verbal {
+    color: var(--color-verbal);
+    margin-left: .5em;
+}
+
+.section#verbal {
+    background: var(--color-verbal-light);
+}
+
+.colored-text-visual {
+    color: var(--color-visual);
+    margin-left: .5em;
+}
+
+.section#visual {
+    background: var(--color-visual-light);
+}
+
+.summary .section p {
+    font-size: 1.3rem;
+}
+
+.continue-button {
+    align-self: flex-end;
+    border: 1px solid var(--dark-blue-text);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-top: .5em;
+    border-radius: .5em;
+    color: var(--dark-blue-text);
+    transition: background .5s, color .5s;
+}
+
+.continue-button:hover {
+    
+    background: var(--dark-blue-text);
+    color: var(--default-color);
+}
+
+.attribution {
+    position: fixed;
+    bottom: 1px;
+    left: 45%;
+    
+}
