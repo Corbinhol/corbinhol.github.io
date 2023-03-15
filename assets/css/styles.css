@@ -30,7 +30,8 @@
     -webkit-box-shadow: 4px 7px 22px 0px rgba(0,0,0,0.18);
     -moz-box-shadow: 4px 7px 22px 0px rgba(0,0,0,0.18);
     overflow: hidden;
-    
+    z-index: 2;
+    background-color: var(--default-color)
 }
 
 .main {
@@ -75,6 +76,7 @@ p {
     color: white;
     text-align: center;
     border-radius: 8%;
+    z-index: 2
 }
 
 .purple-box .your-result {
@@ -215,8 +217,9 @@ p {
 }
 
 .attribution {
-    position: fixed;
-    bottom: 1px;
-    left: 45%;
-    
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    margin-bottom: 1em;
+    z-index: 1;
 }
